@@ -1,7 +1,7 @@
 package Mail::Audit::List;
 use Mail::Audit;
 use vars q(@VERSION);
-$VERSION = '2.250';
+$VERSION = '1.851';
 1;
 
 package Mail::Audit;
