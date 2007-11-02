@@ -1,7 +1,7 @@
 package Mail::Audit::List;
 use Mail::Audit;
 use vars q(@VERSION);
-$VERSION = '1.851';
+$VERSION = '1.852';
 1;
 
 package Mail::Audit;
@@ -24,6 +24,7 @@ sub list_accept {
     my $name = $list->listname;
     $name =~ tr/A-Za-z0-9_-//dc;
     $name = $arg->{munge_name}->($name) if $arg->{munge_name};
+    return 0 unless $name;
     my $deliver_filename = join '/', $dir, $name;
     $self->accept($deliver_filename);
     return $deliver_filename;
