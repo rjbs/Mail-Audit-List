@@ -1,12 +1,11 @@
-package Mail::Audit::List;
-use Mail::Audit;
-use vars q(@VERSION);
-$VERSION = '1.852';
-1;
-
-package Mail::Audit;
-
 use strict;
+package Mail::Audit::List;
+# ABSTRACT: Mail::Audit plugin for automatic list delivery
+use Mail::Audit 2.217;
+
+package
+  Mail::Audit;
+
 use Mail::ListDetector;
 my $DEFAULT_DIR = $ENV{HOME} . "/mail";
 
@@ -32,13 +31,6 @@ sub list_accept {
 }
 
 1;
-__END__
-
-=pod
-
-=head1 NAME
-
-Mail::Audit::List - Mail::Audit plugin for automatic list delivery
 
 =head1 SYNOPSIS
 
@@ -83,10 +75,6 @@ The recipe given above should be able to replace a great number of
 special-casing recipes.
 
 =back
-
-=head1 AUTHOR
-
-Michael Stevens <michael@etla.org>
 
 =head1 SEE ALSO
 

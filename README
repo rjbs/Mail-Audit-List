@@ -1,4 +1,0 @@
-
-Mail::Audit::List is a plugin for Mail::Audit, providing automatic detection of
-mailing lists and delivery of list messages to their own folder.
-
